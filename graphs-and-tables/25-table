@@ -1,0 +1,47 @@
+---------------  ---------  -------------------------  -------------------------  ------------------------
+OOV word         frequency  First Occurence (seconds)  Minimum Spacing (seconds)  Maximum Spacing(seconds)
+
+itll             4          17                         18.5                       3663.5
+booleans         1          69.5                       NA                         NA
+argc             1          134.5                      NA                         NA
+argv             1          135.5                      NA                         NA
+const            1          155.5                      NA                         NA
+thatll           1          173.5                      NA                         NA
+typedef          1          186                        NA                         NA
+strdup           6          263                        6.5                        1794
+reinitialized    1          382                        NA                         NA
+memcpys          1          418.5                      NA                         NA
+deallocator      1          547                        NA                         NA
+boby             1          629.5                      NA                         NA
+struct           7          817.5                      3                          2128.5
+whatevers        1          835.5                      NA                         NA
+elemsize         3          866.5                      275.5                      1752
+dereference      4          941.5                      1                          379
+structs          3          1021.5                     2                          423
+elems            2          1068                       71                         71
+loglength        3          1078                       53.5                       350
+theyve           1          1148.5                     NA                         NA
+dereferenceable  1          1248                       NA                         NA
+elem             1          1272                       NA                         NA
+malloc           18         1374.5                     12.5                       1017
+realloc          11         1375.5                     4.5                        1015.5
+alloclength      1          1483                       NA                         NA
+memcpy           19         1555.5                     3                          644.5
+dereferencing    1          1617.5                     NA                         NA
+studentso        1          1660.5                     NA                         NA
+studentin        1          1749.5                     NA                         NA
+memcpying        1          1906.5                     NA                         NA
+youve            2          2051                       217                        217
+iterator         1          2093                       NA                         NA
+couldve          3          2131.5                     3.5                        1684
+memcpyd          2          2165                       9.5                        9.5
+weve             2          2186                       1732                       1732
+memmove          9          2350.5                     5                          262
+decrements       1          3377                       NA                         NA
+numbytes         1          3571                       NA                         NA
+whatll           1          3697.5                     NA                         NA
+realloced        2          3924.5                     4                          4
+---------------  ---------  -------------------------  -------------------------  ------------------------
+Total number of OOV types 40 
+Total number of OOV tokens 123 
+OOV rate from the table: 1.497990500548045305078553160

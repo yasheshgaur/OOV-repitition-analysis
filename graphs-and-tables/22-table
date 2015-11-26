@@ -1,0 +1,35 @@
+------------  ---------  -------------------------  -------------------------  ------------------------
+OOV word      frequency  First Occurence (seconds)  Minimum Spacing (seconds)  Maximum Spacing(seconds)
+
+subfunction   1          92                         NA                         NA
+struct        4          158.5                      2                          261
+theyll        1          172                        NA                         NA
+structs       2          275.5                      3727.5                     3727.5
+dereference   7          505                        2                          1391
+strcpy        2          654.5                      29.5                       29.5
+\             3          665.5                      3                          19
+memcpy        4          680                        14.5                       149
+malloc        3          953.5                      7.5                        19
+operatornew   2          955.5                      11.5                       11.5
+youd          3          1106                       6.5                        630.5
+chars         1          1189.5                     NA                         NA
+weve          1          1277                       NA                         NA
+endian        3          1449.5                     6.5                        44
+const         4          1813.5                     2.5                        4.5
+dereferenced  1          1975                       NA                         NA
+strdup        5          1992                       2.5                        44
+fred\         3          2036.5                     337.5                      369.5
+wilmas        1          2064                       NA                         NA
+freds         1          2068                       NA                         NA
+wilma\        2          2375.5                     379                        379
+wilm          3          2467                       14.5                       117.5
+oober         1          2724                       NA                         NA
+elem          9          3447.5                     1                          137.5
+yes/no        1          3659.5                     NA                         NA
+memcmp        4          3880.5                     12                         259
+booleans      1          3982                       NA                         NA
+cmpfn         1          4168.5                     NA                         NA
+------------  ---------  -------------------------  -------------------------  ------------------------
+Total number of OOV types 28 
+Total number of OOV tokens 74 
+OOV rate from the table: 0.8800095136163634201450826495

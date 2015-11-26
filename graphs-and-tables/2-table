@@ -1,0 +1,27 @@
+------------  ---------  -------------------------  -------------------------  ------------------------
+OOV word      frequency  First Occurence (seconds)  Minimum Spacing (seconds)  Maximum Spacing(seconds)
+
+snink         6          318.5                      4.5                        840.5
+decrements    1          1167.5                     NA                         NA
+decrementing  1          1234                       NA                         NA
+unitialized   1          1285.5                     NA                         NA
+malloc        1          1506.5                     NA                         NA
+deallocate    1          1513                       NA                         NA
+deallocates   1          1595                       NA                         NA
+callee        3          1638.5                     117                        149.5
+params        1          1735                       NA                         NA
+deallocating  1          1913                       NA                         NA
+studentokay   1          2022                       NA                         NA
+studentyes    1          2038                       NA                         NA
+studentso     2          2069.5                     1246.5                     1246.5
+decremented   3          2392                       5                          37.5
+studentwhat   1          2698.5                     NA                         NA
+struct        4          2752.5                     6.5                        11.5
+dereference   1          2776                       NA                         NA
+studentright  1          2819.5                     NA                         NA
+placeholders  1          3019                       NA                         NA
+studentthose  1          3464                       NA                         NA
+------------  ---------  -------------------------  -------------------------  ------------------------
+Total number of OOV types 20 
+Total number of OOV tokens 33 
+OOV rate from the table: 0.4534212695795548227535037098

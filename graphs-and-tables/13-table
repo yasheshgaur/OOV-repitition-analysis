@@ -1,0 +1,31 @@
+------------  ---------  -------------------------  -------------------------  ------------------------
+OOV word      frequency  First Occurence (seconds)  Minimum Spacing (seconds)  Maximum Spacing(seconds)
+
+recurse       1          137                        NA                         NA
+itll          2          372.5                      2567                       2567
+segfaults     1          478                        NA                         NA
+cacat         1          546.5                      NA                         NA
+studentits    1          845.5                      NA                         NA
+wouldve       1          1051.5                     NA                         NA
+youd          2          1235                       177.5                      177.5
+flahen        1          1261                       NA                         NA
+traversal     2          1347.5                     10.5                       10.5
+recursions    1          1561.5                     NA                         NA
+prepend       2          1624.5                     609.5                      609.5
+cond          9          1728                       1.5                        253
+parend        2          1944.5                     710                        710
+booleans      1          2154.5                     NA                         NA
+studentwasnt  1          2180.5                     NA                         NA
+studentwhat   1          2209                       NA                         NA
+studentso     1          2279                       NA                         NA
+disjunct      1          2625.5                     NA                         NA
+valuate       1          2682                       NA                         NA
+couldve       2          3131.5                     577                        577
+funct         1          3396                       NA                         NA
+youve         2          3416                       690.5                      690.5
+weve          1          3627.5                     NA                         NA
+schemish      1          3878                       NA                         NA
+------------  ---------  -------------------------  -------------------------  ------------------------
+Total number of OOV types 24 
+Total number of OOV tokens 39 
+OOV rate from the table: 0.4722693146040203439089367886

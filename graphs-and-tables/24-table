@@ -1,0 +1,53 @@
+--------------  ---------  -------------------------  -------------------------  ------------------------
+OOV word        frequency  First Occurence (seconds)  Minimum Spacing (seconds)  Maximum Spacing(seconds)
+
+samaya          1          42.5                       NA                         NA
+struct          8          129                        22.5                       1652
+destructor      1          177.5                      NA                         NA
+stacknew        12         189                        2.5                        1466.5
+stackdispose    6          220                        4                          1606.5
+loglength       14         237                        5                          865
+malloc          16         256.5                      3                          930.5
+elems           15         313                        58                         321
+youve           3          331                        245.5                      1902
+seg             1          347.5                      NA                         NA
+erroring        1          349.5                      NA                         NA
+>               36         387                        2                          608
+freds           1          504.5                      NA                         NA
+wilmas          1          505.5                      NA                         NA
+stackpush       6          557                        2                          1354
+whatevers       2          609.5                      1921.5                     1921.5
+alloclength     6          727                        88                         1189
+deallocate      1          878                        NA                         NA
+realloc         18         886                        8.5                        1208.5
+uninitialized   1          1074.5                     NA                         NA
+itll            3          1177                       34.5                       517
+studentif       2          1431                       84.5                       84.5
+studentso       1          1466                       NA                         NA
+#define         1          1507                       NA                         NA
+stackpop        8          1563                       5.5                        1184
+thatll          1          1783                       NA                         NA
+bools           1          1842                       NA                         NA
+typedef         1          1866                       NA                         NA
+spencil         1          1953                       NA                         NA
+elemsize        16         1968                       1                          608
+elemaddr        11         1990                       0.5                        448
+structfraction  1          2007                       NA                         NA
+studentwhere    1          2083                       NA                         NA
+memcopy         7          2120.5                     57                         745.5
+elem            1          2139                       NA                         NA
+stackgrow       5          2357                       7                          293
+stackgrows      1          2359.5                     NA                         NA
+>elemsize       1          2492.5                     NA                         NA
+studentthe      1          2564                       NA                         NA
+strdup          1          3074.5                     NA                         NA
+deallocates     1          3105.5                     NA                         NA
+studentin       1          3163.5                     NA                         NA
+youd            1          3317                       NA                         NA
+studentfor      1          3331.5                     NA                         NA
+memmove         1          3668.5                     NA                         NA
+bsearch         1          3669.5                     NA                         NA
+--------------  ---------  -------------------------  -------------------------  ------------------------
+Total number of OOV types 46 
+Total number of OOV tokens 221 
+OOV rate from the table: 2.888888888888888888888888889

@@ -1,0 +1,32 @@
+--------------  ---------  -------------------------  -------------------------  ------------------------
+OOV word        frequency  First Occurence (seconds)  Minimum Spacing (seconds)  Maximum Spacing(seconds)
+
+aliasing        2          370.5                      441                        441
+studenthow      1          548.5                      NA                         NA
+unary           20         1003                       2.5                        226
+listification   1          1341                       NA                         NA
+listifies       1          1366                       NA                         NA
+ternary         1          1616.5                     NA                         NA
+consing         1          1746.5                     NA                         NA
+theyve          2          1850.5                     456.5                      456.5
+conses          1          2074                       NA                         NA
+falses          1          2239.5                     NA                         NA
+studentin       1          2262.5                     NA                         NA
+consed          3          2272.5                     15                         63.5
+deallocation    3          2417.5                     39                         189
+deallocate      2          2537                       356                        356
+globals         3          2703.5                     5.5                        9
+pictorially     1          2817.5                     NA                         NA
+studentthe      1          3031                       NA                         NA
+youve           2          3112                       931                        931
+deallocated     1          3138.5                     NA                         NA
+traversal       2          3215                       196                        196
+rightmost       1          3248.5                     NA                         NA
+deallocating    1          3470                       NA                         NA
+overallocation  1          3501.5                     NA                         NA
+erlang          2          3769                       236                        236
+pythonesque     1          3998                       NA                         NA
+--------------  ---------  -------------------------  -------------------------  ------------------------
+Total number of OOV types 25 
+Total number of OOV tokens 56 
+OOV rate from the table: 0.6863586223801936511827429832

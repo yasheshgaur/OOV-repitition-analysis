@@ -1,0 +1,42 @@
+-----------------  ---------  -------------------------  -------------------------  ------------------------
+OOV word           frequency  First Occurence (seconds)  Minimum Spacing (seconds)  Maximum Spacing(seconds)
+
+studentwhat        1          152.5                      NA                         NA
+that'              1          262.5                      NA                         NA
+dereferences       1          269                        NA                         NA
+cout               8          310.5                      9                          1341.5
+<<                 8          311                        1                          1414
+endl               2          312.5                      2206                       2206
+structs            9          493                        0.5                        1612.5
+studentyeah        3          505.5                      704.5                      2404
+ndns               2          527.5                      190                        190
+struct             19         755.5                      2.5                        1739
+denom              19         760.5                      1                          126.5
+studentso          2          1274.5                     609                        609
+studenthow         1          1287                       NA                         NA
+studentyou         1          1303                       NA                         NA
+dereference        4          1351.5                     57.5                       927
+studentbecause     1          1380.5                     NA                         NA
+quantums           1          1567                       NA                         NA
+studentsay         1          1705                       NA                         NA
+initializing       1          1714                       NA                         NA
+oneth              4          2102.5                     343                        755
+studentis          1          2125                       NA                         NA
+studentpermission  1          2157                       NA                         NA
+uninitialized      5          2413.5                     1                          1441
+twoth              2          2672.5                     342.5                      342.5
+suid               9          2878.5                     2                          441
+booleans           1          2997.5                     NA                         NA
+strdup             5          3073.5                     4                          221
+cpy                1          3289.5                     NA                         NA
+strcpy             8          3297                       20                         144
+declarated         1          3447                       NA                         NA
+studentlook        1          3677                       NA                         NA
+studentit          1          3718.5                     NA                         NA
+whammies           1          3801.5                     NA                         NA
+textually          1          3952.5                     NA                         NA
+templatize         2          4441                       90                         90
+-----------------  ---------  -------------------------  -------------------------  ------------------------
+Total number of OOV types 35 
+Total number of OOV tokens 129 
+OOV rate from the table: 1.412460308770393080039417497

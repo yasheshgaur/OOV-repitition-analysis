@@ -1,0 +1,31 @@
+----------------------  ---------  -------------------------  -------------------------  ------------------------
+OOV word                frequency  First Occurence (seconds)  Minimum Spacing (seconds)  Maximum Spacing(seconds)
+
+lambdas                 3          66.5                       1382.5                     1555.5
+{                       4          115                        7.5                        390.5
+}                       4          117                        7.5                        390
+prepended               1          276.5                      NA                         NA
+weve                    2          690                        247                        247
+intervariable           1          699.5                      NA                         NA
+conss                   1          759.5                      NA                         NA
+intactive               1          992                        NA                         NA
+paren                   4          1198.5                     4.5                        2236
+theyve                  1          1281                       NA                         NA
+youve                   4          1519.5                     82.5                       1505
+theyd                   1          1854.5                     NA                         NA
+structs                 2          1900                       3                          3
+youd                    1          1986                       NA                         NA
+itll                    1          2107                       NA                         NA
+subgrouped              1          2432                       NA                         NA
+expressiveness/density  1          3009.5                     NA                         NA
+booleans                1          3187.5                     NA                         NA
+studentdid              1          3345                       NA                         NA
+studenthow              1          3375.5                     NA                         NA
+studentup               1          3611                       NA                         NA
+programmatically        2          3682.5                     145                        145
+consing                 1          3971                       NA                         NA
+mallic                  1          4003                       NA                         NA
+----------------------  ---------  -------------------------  -------------------------  ------------------------
+Total number of OOV types 24 
+Total number of OOV tokens 41 
+OOV rate from the table: 0.4891434025292293008828441899

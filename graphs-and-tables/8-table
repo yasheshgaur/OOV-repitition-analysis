@@ -1,0 +1,23 @@
+----------------  ---------  -------------------------  -------------------------  ------------------------
+OOV word          frequency  First Occurence (seconds)  Minimum Spacing (seconds)  Maximum Spacing(seconds)
+
+supd              4          55                         9                          43
+decrements        1          330.5                      NA                         NA
+semaphores        13         339.5                      5                          1014
+programmatically  6          380.5                      23.5                       1293
+weve              1          437                        NA                         NA
+decremented       3          667.5                      493.5                      2628.5
+itll              3          752.5                      876.5                      1109
+caldronal         1          948.5                      NA                         NA
+youve             3          1072.5                     4.5                        1732.5
+initializing      1          1337                       NA                         NA
+globals           4          1371.5                     8.5                        24.5
+imog              1          1720.5                     NA                         NA
+clobbers          1          1756.5                     NA                         NA
+hiccupped         1          3010                       NA                         NA
+studentso         1          3039.5                     NA                         NA
+facebookcom       1          3243.5                     NA                         NA
+----------------  ---------  -------------------------  -------------------------  ------------------------
+Total number of OOV types 16 
+Total number of OOV tokens 45 
+OOV rate from the table: 0.5369287674501849421310106193

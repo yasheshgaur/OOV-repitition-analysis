@@ -1,0 +1,45 @@
+---------------  ---------  -------------------------  -------------------------  ------------------------
+OOV word         frequency  First Occurence (seconds)  Minimum Spacing (seconds)  Maximum Spacing(seconds)
+
+crankin'         1          11.5                       NA                         NA
+lsearch          24         50.5                       0.5                        1263.5
+<                2          157.5                      3482.5                     3482.5
+i'th             2          165.5                      151.5                      151.5
+typeless         1          212                        NA                         NA
+centinal         2          383.5                      3700.5                     3700.5
+bitwise          1          409                        NA                         NA
+intarray         1          498                        NA                         NA
+initializing     1          503                        NA                         NA
+lsearching       2          976                        40                         40
+strcmp           3          1411.5                     5                          270.5
+strcomp          5          1415                       1                          430
+dereference      9          1777.5                     10                         1860
+clib             1          1799                       NA                         NA
+booforce         1          1849                       NA                         NA
+studentyeah      4          1897                       72                         717
+intcompare       1          1942                       NA                         NA
+paren            1          1977                       NA                         NA
+studentactually  1          2031                       NA                         NA
+dereferencing    1          2048.5                     NA                         NA
+studentwhy       2          2057.5                     703.5                      703.5
+studentjust      1          2064                       NA                         NA
+bsearch          7          2331                       18.5                       859
+struct           5          2527.5                     27                         570
+lexors           1          2789                       NA                         NA
+modernisms       1          2832                       NA                         NA
+rsg              1          2878.5                     NA                         NA
+youve            4          2901.5                     5                          669.5
+const            2          3101                       6                          6
+typedef          2          3129.5                     1.5                        1.5
+destructor       1          3228.5                     NA                         NA
+weve             1          3410.5                     NA                         NA
+itll             1          3555                       NA                         NA
+alloc            3          3878                       1.5                        28.5
+malloc           4          3892.5                     20                         109
+substring        1          3907.5                     NA                         NA
+seg              3          4098                       3.5                        21
+youd             1          4109.5                     NA                         NA
+---------------  ---------  -------------------------  -------------------------  ------------------------
+Total number of OOV types 38 
+Total number of OOV tokens 105 
+OOV rate from the table: 1.259143782228084902266458808

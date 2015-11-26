@@ -1,0 +1,48 @@
+----------------  ---------  -------------------------  -------------------------  ------------------------
+OOV word          frequency  First Occurence (seconds)  Minimum Spacing (seconds)  Maximum Spacing(seconds)
+
+booleans          3          115.5                      345                        758.5
+youve             4          234                        2.5                        2862
+iterators         1          292                        NA                         NA
+lambdas           2          301.5                      139                        139
+structs           2          375.5                      3118                       3118
+imperatively      1          392.5                      NA                         NA
+smtp              1          679                        NA                         NA
+actp              1          680                        NA                         NA
+actps             1          681                        NA                         NA
+delimiters        1          821                        NA                         NA
+kawaa             2          908                        6                          6
+superset          1          1322                       NA                         NA
+nums              3          1529.5                     10                         41
+sublists          1          1630                       NA                         NA
+programmatically  1          1649.5                     NA                         NA
+weve              2          1704                       5.5                        5.5
+fortran           1          1791                       NA                         NA
+scq               5          1967                       7.5                        124
+sublist           1          1989                       NA                         NA
+theyve            1          2134.5                     NA                         NA
+tuple             3          2161                       396                        1423
+const             1          2196                       NA                         NA
+theyll            1          2239                       NA                         NA
+itll              1          2279.5                     NA                         NA
+divisors          26         2303                       1.5                        299.5
+rehydrated        1          2481                       NA                         NA
+loopish           1          2539.5                     NA                         NA
+iterables         1          2574.5                     NA                         NA
+iterates          1          2687.5                     NA                         NA
+iterable          2          2693                       27                         27
+whatevers         1          2762.5                     NA                         NA
+youd              2          2842.5                     457                        457
+devel             2          2873.5                     195                        195
+presumable        1          3219                       NA                         NA
+struct            1          3299                       NA                         NA
+cdur              1          3310                       NA                         NA
+tuples            1          3374                       NA                         NA
+interdictionary   1          3726.5                     NA                         NA
+hashable          1          3759.5                     NA                         NA
+deserialized      1          3953.5                     NA                         NA
+rsg               1          3988                       NA                         NA
+----------------  ---------  -------------------------  -------------------------  ------------------------
+Total number of OOV types 41 
+Total number of OOV tokens 86 
+OOV rate from the table: 1.0498046875

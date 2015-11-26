@@ -1,0 +1,29 @@
+----------------  ---------  -------------------------  -------------------------  ------------------------
+OOV word          frequency  First Occurence (seconds)  Minimum Spacing (seconds)  Maximum Spacing(seconds)
+
+itll              3          83                         349                        578
+youve             1          94.5                       NA                         NA
+preprocessor      1          150.5                      NA                         NA
+executables       1          161.5                      NA                         NA
+planarized        1          259.5                      NA                         NA
+moronically       1          362.5                      NA                         NA
+youd              2          633                        749                        749
+studentif         2          821.5                      646                        646
+studenttheres     1          1551.5                     NA                         NA
+studentwell       1          1694                       NA                         NA
+studentyeah       2          1713.5                     1548.5                     1548.5
+studentokay       1          1756                       NA                         NA
+studentwhat       1          1783.5                     NA                         NA
+studentright      1          1795                       NA                         NA
+studentyou        1          1866                       NA                         NA
+studentthe        1          2070.5                     NA                         NA
+somebodys         1          2168.5                     NA                         NA
+decremented       1          2671                       NA                         NA
+programmatically  1          3022.5                     NA                         NA
+everybodys        2          3167.5                     37.5                       37.5
+studentdo         1          3308                       NA                         NA
+studentis         1          3363                       NA                         NA
+----------------  ---------  -------------------------  -------------------------  ------------------------
+Total number of OOV types 22 
+Total number of OOV tokens 28 
+OOV rate from the table: 0.4049168474331164135936370210

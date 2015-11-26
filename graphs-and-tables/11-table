@@ -1,0 +1,39 @@
+----------------  ---------  -------------------------  -------------------------  ------------------------
+OOV word          frequency  First Occurence (seconds)  Minimum Spacing (seconds)  Maximum Spacing(seconds)
+
+youve             3          164                        3                          411
+nths              1          339.5                      NA                         NA
+multithreading    1          553.5                      NA                         NA
+fortran           1          580.5                      NA                         NA
+xz                1          1028                       NA                         NA
+studentwhy        1          1069.5                     NA                         NA
+studentyeah       2          1083.5                     1726                       1726
+kawaa             6          1330.5                     35                         1004.5
+tsch              1          1384                       NA                         NA
+tcsh              1          1385.5                     NA                         NA
+booleans          3          1470                       207                        1262.5
+itll              6          1476.5                     9                          1359
+/                 2          1504.5                     18.5                       18.5
+untenured         1          1638                       NA                         NA
+youd              7          1738.5                     4.5                        1184.5
+paren             3          1995.5                     1.5                        1045.5
+structs           1          2093                       NA                         NA
+cdur              20         2181.5                     1.5                        350.5
+dissectors        1          2201.5                     NA                         NA
+metafunction      1          2442                       NA                         NA
+coulder           1          2571.5                     NA                         NA
+studentyes        1          2806                       NA                         NA
+prepends          1          2899.5                     NA                         NA
+theyve            2          2935.5                     2.5                        2.5
+studentwould      1          3102                       NA                         NA
+delineator        1          3440                       NA                         NA
+weve              2          3487.5                     917                        917
+prepopulated      1          3711                       NA                         NA
+programmatically  1          3719                       NA                         NA
+studentdoes       1          3769.5                     NA                         NA
+studentcan        1          3819.5                     NA                         NA
+iteratively       1          4050.5                     NA                         NA
+----------------  ---------  -------------------------  -------------------------  ------------------------
+Total number of OOV types 32 
+Total number of OOV tokens 77 
+OOV rate from the table: 0.8714350384789497510185604346

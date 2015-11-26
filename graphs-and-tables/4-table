@@ -1,0 +1,41 @@
+--------------  ---------  -------------------------  -------------------------  ------------------------
+OOV word        frequency  First Occurence (seconds)  Minimum Spacing (seconds)  Maximum Spacing(seconds)
+
+dereferences    1          111                        NA                         NA
+youve           7          215                        9                          1256.5
+preprocessor    21         240                        9                          513
+itll            14         339                        5                          956.5
+paren           3          381                        2.5                        64.5
+templatized     1          710                        NA                         NA
+youd            6          716.5                      5.5                        1486
+studentis       1          759                        NA                         NA
+studentyeah     2          769                        2081                       2081
+studentdo       1          832                        NA                         NA
+studentwell     1          1243.5                     NA                         NA
+studentquickly  1          1379                       NA                         NA
+upcasting       1          1417                       NA                         NA
+cond            1          1508.5                     NA                         NA
+turnery         1          1544                       NA                         NA
+filename        1          1574                       NA                         NA
+const           1          1748.5                     NA                         NA
+globals         1          1749                       NA                         NA
+theyll          1          1908                       NA                         NA
+stdio           3          2247.5                     526                        1338
+simp            1          2266                       NA                         NA
+preprocessors   5          2302.5                     28.5                       425
+hashset         3          2687                       15                         98.5
+airheaded       1          2692.5                     NA                         NA
+theyd           1          2743.5                     NA                         NA
+structs         1          2877                       NA                         NA
+studentyes      1          3100.5                     NA                         NA
+studentso       1          3115.5                     NA                         NA
+printec         2          3592                       190.5                      190.5
+stblib          1          3596                       NA                         NA
+malloc          5          3602                       30                         307.5
+realloc         3          3605                       3                          456
+myprog          1          3975                       NA                         NA
+stdlib          1          4129.5                     NA                         NA
+--------------  ---------  -------------------------  -------------------------  ------------------------
+Total number of OOV types 34 
+Total number of OOV tokens 96 
+OOV rate from the table: 1.145858200047744091668656004

@@ -1,0 +1,37 @@
+-------------  ---------  -------------------------  -------------------------  ------------------------
+OOV word       frequency  First Occurence (seconds)  Minimum Spacing (seconds)  Maximum Spacing(seconds)
+
+everybodys     1          238.5                      NA                         NA
+realic         1          330                        NA                         NA
+malic          13         331                        23                         1704
+youve          4          392.5                      3                          1381
+intmaim        1          470.5                      NA                         NA
+libh           1          514.5                      NA                         NA
+printa         4          576.5                      7                          204
+itll           15         701                        1.5                        1487
+commoning      1          768                        NA                         NA
+placeholders   1          896                        NA                         NA
+studenti       1          1296                       NA                         NA
+certh          2          1475                       60.5                       60.5
+callee         3          1556                       36.5                       2636.5
+callees        1          1581.5                     NA                         NA
+d/m            1          1700.5                     NA                         NA
+struct         1          1923                       NA                         NA
+studentzero    1          2150.5                     NA                         NA
+ndngo          1          2212                       NA                         NA
+slonski        1          2365.5                     NA                         NA
+npmcm          1          2425                       NA                         NA
+uninitialized  3          2551                       37.5                       1549
+youd           1          2662.5                     NA                         NA
+disambiguate   2          2811.5                     72.5                       72.5
+memcmp         3          2829                       16.5                       41
+seg            4          3088                       57                         298
+dereference    5          3106                       9                          117.5
+dereferencing  4          3192                       31.5                       162.5
+demotes        1          4165.5                     NA                         NA
+decremented    2          4179.5                     23                         23
+decrementing   1          4267                       NA                         NA
+-------------  ---------  -------------------------  -------------------------  ------------------------
+Total number of OOV types 30 
+Total number of OOV tokens 81 
+OOV rate from the table: 0.9378256339006599513720041681

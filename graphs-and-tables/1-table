@@ -1,0 +1,24 @@
+------------------------  ---------  -------------------------  -------------------------  ------------------------
+OOV word                  frequency  First Occurence (seconds)  Minimum Spacing (seconds)  Maximum Spacing(seconds)
+
+studenti                  1          9                          NA                         NA
+theyve                    2          259.5                      2332.5                     2332.5
+theyll                    2          278.5                      171                        171
+itll                      5          427.5                      11                         1360.5
+youve                     9          446                        4                          1207.5
+emax                      1          461                        NA                         NA
+thatll                    1          513.5                      NA                         NA
+weve                      1          614.5                      NA                         NA
+@csstanfordedu            1          1251                       NA                         NA
+everybodys                1          1286.5                     NA                         NA
+students@liststanfordedu  1          1498                       NA                         NA
+stanforducom              1          1570.5                     NA                         NA
+ustanfordcom              1          1571.5                     NA                         NA
+wdu                       1          1575                       NA                         NA
+executables               1          1919                       NA                         NA
+pipelined                 1          2122                       NA                         NA
+javas                     1          2781                       NA                         NA
+------------------------  ---------  -------------------------  -------------------------  ------------------------
+Total number of OOV types 17 
+Total number of OOV tokens 31 
+OOV rate from the table: 0.5329207495272477221935705690

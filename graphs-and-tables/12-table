@@ -1,0 +1,16 @@
+----------------  ---------  -------------------------  -------------------------  ------------------------
+OOV word          frequency  First Occurence (seconds)  Minimum Spacing (seconds)  Maximum Spacing(seconds)
+
+sepd              1          91.5                       NA                         NA
+booleans          1          150                        NA                         NA
+strucks           2          154                        4234.5                     4234.5
+is'               1          1095                       NA                         NA
+cout              2          1948                       10.5                       10.5
+pndl              1          1964                       NA                         NA
+studentinitially  1          2521.5                     NA                         NA
+pixelate          1          2797.5                     NA                         NA
+dereferenced      1          4307                       NA                         NA
+----------------  ---------  -------------------------  -------------------------  ------------------------
+Total number of OOV types 9 
+Total number of OOV tokens 11 
+OOV rate from the table: 0.1250284155489884064560127302

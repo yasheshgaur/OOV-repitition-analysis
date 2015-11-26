@@ -1,0 +1,38 @@
+-------------  ---------  -------------------------  -------------------------  ------------------------
+OOV word       frequency  First Occurence (seconds)  Minimum Spacing (seconds)  Maximum Spacing(seconds)
+
+checkwhatever  1          32                         NA                         NA
+scpd           1          77                         NA                         NA
+thatll         1          280.5                      NA                         NA
+deallocation   1          294.5                      NA                         NA
+decremented    1          439                        NA                         NA
+youve          1          622.5                      NA                         NA
+initializing   1          755                        NA                         NA
+dereferences   1          776                        NA                         NA
+studentwhen    1          842.5                      NA                         NA
+studentwhy     1          850                        NA                         NA
+threeof        1          1141.5                     NA                         NA
+weve           1          1276.5                     NA                         NA
+therea         1          1286.5                     NA                         NA
+dereferenced   1          1388                       NA                         NA
+dereferencing  1          1556.5                     NA                         NA
+rebind         1          1784.5                     NA                         NA
+reassociate    1          1797                       NA                         NA
+structs        11         1997.5                     2.5                        620
+theyll         1          2031                       NA                         NA
+destructors    2          2064.5                     66                         66
+struct         4          2107                       40.5                       187.5
+binky          11         2122                       1.5                        282.5
+semicolons     2          2157.5                     2                          2
+struct/class   1          2242.5                     NA                         NA
+minky          7          2279                       2                          88.5
+slided         1          2385                       NA                         NA
+denom          1          2946.5                     NA                         NA
+itll           10         3219.5                     2                          407
+preprocessor   13         3329                       4.5                        193.5
+and/or         1          3583.5                     NA                         NA
+studentwhat    1          3995                       NA                         NA
+-------------  ---------  -------------------------  -------------------------  ------------------------
+Total number of OOV types 31 
+Total number of OOV tokens 83 
+OOV rate from the table: 1.010716025328787140769605455

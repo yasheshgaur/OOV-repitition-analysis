@@ -1,0 +1,40 @@
+----------------  ---------  -------------------------  -------------------------  ------------------------
+OOV word          frequency  First Occurence (seconds)  Minimum Spacing (seconds)  Maximum Spacing(seconds)
+
+semaphores        6          192                        283.5                      1500.5
+theyve            3          392                        1151.5                     1873
+semicolons        1          455                        NA                         NA
+weve              2          643.5                      2639                       2639
+somebodys         1          683                        NA                         NA
+multithreading    1          720.5                      NA                         NA
+programmatically  3          801.5                      313.5                      1393.5
+studentare        1          813                        NA                         NA
+youd              6          958.5                      2.5                        1768.5
+whered            1          998.5                      NA                         NA
+reacquiring       1          1030.5                     NA                         NA
+spinlock          1          1069.5                     NA                         NA
+alterative        1          1109.5                     NA                         NA
+const             3          1225                       2                          453.5
+rstar             2          1225.5                     97                         97
+multithreaded     1          1410                       NA                         NA
+minusing          1          1456                       NA                         NA
+thered            1          1558                       NA                         NA
+itll              2          1887.5                     2                          2
+studentif         1          1955.5                     NA                         NA
+studentis         2          2558                       352.5                      352.5
+studentso         2          2605                       429                        429
+youve             4          2708                       5.5                        536.5
+decrements        1          2802                       NA                         NA
+studentyeah       2          2840.5                     716.5                      716.5
+secrement         1          2916                       NA                         NA
+booleans          1          3087                       NA                         NA
+studentthats      1          3089.5                     NA                         NA
+studentof         1          3094                       NA                         NA
+studenteach       1          3097                       NA                         NA
+studentreference  1          3181                       NA                         NA
+minimilize        1          3280                       NA                         NA
+thatd             1          3401                       NA                         NA
+----------------  ---------  -------------------------  -------------------------  ------------------------
+Total number of OOV types 33 
+Total number of OOV tokens 58 
+OOV rate from the table: 0.7220216606498194945848375451

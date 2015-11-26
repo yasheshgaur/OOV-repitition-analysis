@@ -1,0 +1,38 @@
+-----------------  ---------  -------------------------  -------------------------  ------------------------
+OOV word           frequency  First Occurence (seconds)  Minimum Spacing (seconds)  Maximum Spacing(seconds)
+
+rsg                2          54                         251                        251
+lamdas             5          76.5                       0.5                        1359
+hashable           1          179.5                      NA                         NA
+texturally         1          237.5                      NA                         NA
+literals           2          273                        9                          9
+globals            1          599                        NA                         NA
+iterator           1          778.5                      NA                         NA
+paginates          1          956.5                      NA                         NA
+studentso          1          1044                       NA                         NA
+deterministically  1          1133                       NA                         NA
+randomchoice       1          1301.5                     NA                         NA
+randomseed         1          1302.5                     NA                         NA
+unary              3          1390.5                     16                         24
+arity              1          1404.5                     NA                         NA
+zappend            1          1807                       NA                         NA
+aliasing           2          1988.5                     268.5                      268.5
+serializations     1          2268.5                     NA                         NA
+struct             4          2317                       41.5                       76.5
+structs            4          2423                       1.5                        1247
+javalangobject     2          2753.5                     1000                       1000
+initializes        2          2771.5                     446                        446
+reinitialize       1          2859                       NA                         NA
+rebind             1          2860.5                     NA                         NA
+interable          1          2887                       NA                         NA
+divisorspy         1          3155                       NA                         NA
+lexpy              1          3170.5                     NA                         NA
+studentyes         1          3211                       NA                         NA
+zizzaba            1          3520.5                     NA                         NA
+dict               3          3551                       47.5                       253
+capsulation        1          3819                       NA                         NA
+shrinkable         2          3903                       4                          4
+-----------------  ---------  -------------------------  -------------------------  ------------------------
+Total number of OOV types 31 
+Total number of OOV tokens 51 
+OOV rate from the table: 0.6304858449746569415255284955

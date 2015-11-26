@@ -1,0 +1,33 @@
+---------------  ---------  -------------------------  -------------------------  ------------------------
+OOV word         frequency  First Occurence (seconds)  Minimum Spacing (seconds)  Maximum Spacing(seconds)
+
+multithreading   1          27.5                       NA                         NA
+therell          1          90.5                       NA                         NA
+demotes          2          178.5                      21.5                       21.5
+weve             3          320                        872                        1451
+globals          3          389.5                      4                          9
+theyve           1          440.5                      NA                         NA
+youve            5          797.5                      180.5                      996.5
+printf           15         800.5                      4.5                        169
+printfs          2          854                        318.5                      318.5
+placeholders     2          863.5                      256.5                      256.5
+endl             1          885.5                      NA                         NA
+const            2          962.5                      3.5                        3.5
+complier         4          1006                       17                         1188.5
+structs          8          1050.5                     1.5                        583.5
+compliers        4          1093.5                     236                        452.5
+scanf            3          1136                       1.5                        39.5
+itll             5          1160.5                     5.5                        1275
+struct           16         1631                       2.5                        105
+bootstrapping    1          2224                       NA                         NA
+executables      1          2389.5                     NA                         NA
+proxied          1          2491.5                     NA                         NA
+subhelper        1          2687.5                     NA                         NA
+megs             2          2743                       1                          1
+interlay         1          2871.5                     NA                         NA
+multiprocessing  1          2974                       NA                         NA
+substacks        1          3189.5                     NA                         NA
+---------------  ---------  -------------------------  -------------------------  ------------------------
+Total number of OOV types 26 
+Total number of OOV tokens 87 
+OOV rate from the table: 1.200331125827814569536423841

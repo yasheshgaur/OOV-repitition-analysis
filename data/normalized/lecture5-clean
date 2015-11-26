@@ -1,0 +1,266 @@
+Programming Paradigm-Lecturezerofive
+
+Instructor (Jerry Cain):Hey, everyone, welcome. I do not have any handouts for you today. You are all crankin' on Assignment one, which was intended to be very short through Sunday night. The first real assignment went out Wednesday. That is due next Thursday evening. And at least until the mid-term, I am gonna establish this Wednesday to next Thursday schedule with all the assignments so there is some reliability as to how the workload ebbs and flows.
+
+When I left you last time, I was probably about sixty percent of the way through my lsearch implementation. I am trying to go from type specific to generic, but I am trying to do that in the C language.
+
+So this is what I wrote last time.
+
+void  star lsearch
+
+And let is see if I can write the parameters out a little bit more neatly this time.
+
+void  star key
+
+void  star base int
+
+m is the length of that array
+
+int lm size is the size of the elements
+
+And that is technically all the implementation that lsearch needs in order to figure out where the boundaries are between neighboring elements.
+
+The fifth parameter is the one I want to focus on for the next twenty minutes. It has to have this as a prototype. I like the asterisk, we do not need it right there but I like to keep it there, and then I take two void  star 's. I do not need to provide parameters names here because I am not implementing this function here.
+
+The basic algorithm for a linear search from front to back, that does not change. It is just the fact that we are trying to present an implementation that does not care about any specific one data type.
+
+So I want to do this for int i  equals  zero; i < mi plus  plus . With each iteration, I want to manually compute the address of the i'th element. I can certainly do that in terms of base, lm size is the quantum distance to move with each hop, and then i obviously tells me which element I am interested in. Internally, I want to do this:
+
+void  star  lm (address)
+
+This is the thing that is going to be compared against that key right there to figure out whether or not we have a match.
+
+This is equal to numerically:
+
+base plus i times om size.
+
+But we mentioned last time that this is strictly pointer arithmetic against a typeless pointer. No, I am sorry, the pointer has a data type; it is a type void  star  so it does not know what it is pointing to. Several people have suggested, or asked, why they just did not make default to normal mac when this is a void  star . The specification of C just said I do not want to allow point arithmetic by default against a void  star , because there was a clear rule for what point arithmetic means when this is strongly typed.
+
+When it is weakly typed with a void  star , very generic, I am just pointing to anything, and I have no idea what. You cannot do this, the hack, and it really is a hack, but it is a well-known hack, is to sedate base into behaving like a character pointer just long enough to actually get a number out of this expression.
+
+Drag the base here, say you are pointing to characters. Do technically point arithmetic against the character pointer. This, as an expression, is an integer. It is technically multiplied by size of char, but that is one. So this ends up being a char  star  that happens to point to a boundary between the i minus oneth and the i'th element. I assigned it to a void  star . You do not have to cast the overall thing to a void  star  if you do not want to because this is a more general pointer; it is willing to take on any pointer type.
+
+If after you do this, you use the comparison function written by the client that knows how to compare the things that reside at these addresses, pass in a key, pass in a lm address. And if that comes back with a match of zero, then go ahead and return (I want to return the pointer), so go ahead and return lm address. This ends the entire four-loop. And if I get to the end and I have nothing to return, I will just return null as a centinal that nothing worked out.
+
+This replaces the double-equals that sits in between two integers from the integer version we wrote in the middle of last lecture. Double-equals between two strong types that are atomic, it knows how to do comparison. In almost all cases, it just does a bitwise comparison and can come out with a -one, or a  plus one, or a zero.
+
+When you go generic on the C compiler, you have to say that I know how to compare the elements because I know, even though this is generic code, I know what type of array I am searching. This code does not. So you have to pass in a little bit of a callback, or a hook, to tell the implementation how it should be comparing your elements.
+
+This is easy to understand. It is easy to just look at this and understand what is going on because you know what linear search is; that is not the hard part. The hard part is getting all the pointer math correct in the char  star  trick, and actually aligning these things up properly, and invoking the comparison function properly.
+
+Using this as a client is at least as difficult as understanding this code. If I want to go, just think in terms of the int domain, and I have the following, I have intArray is equal to (this is a shorthand way of initializing an array) int size is equal to, I will just hard code it as six. If I want to search for the number seven, I actually have to do the following: number  equals  seven. I have to set aside space for the key that I am interested in because I have to pass the address of that thing as the very first element to the lsearch call. Does that make sense?
+
+You know that this is laid out as an array of length six. The seven resides there. I am passing that and that width and six to the lsearch routine. I am hoping that it returns that right there. I want to find the place where the very first seven in the array resides.
+
+int  star  found  equals  (This is how I would call lsearch.) lsearch  ampersand  of number. Array (No  ampersand  is needed. There is an implicit  ampersand  because it is really  ampersand  of array of zero) pass in six, pass in size of int. That at compile time evaluates to four, at least in our world. And then I have to provide a comparison function. I want to write a comparison function that is dedicated to comparing integers.
+
+So I am gonna write that right now, int compare. Now, this will have to be defined as a function before I call this code right here, that I am having to implement it afterwards. If it is the case that found equals equals null, then you are sad, otherwise you are happy. Does that make sense to people? Let me write the comparison function so we can understand why it has to take the form that it is, int cmp, if it is gonna actually compile and match this as a prototype, it absolutely has to take two void  star 's and return an integer. That is the class of function that is accepted as the fifth parameter right there. You may ask, well, can I just actually write a comparison function that takes two int  star 's and returns an int? And the answer is you could, but you would have to cast it to be this type right here. It turns out that this is all pointers of the same size. You would pass them then as int  star 's, and they would be absorbed as void  star 's. But it is just a much better thing to do is to actually write the comparison function to match that prototype exactly. The implementation of that is a little clunky, but it does not surprise you, it just has a lot of asterisks involved.
+
+void  star  lm one
+
+void  star  lm two
+
+Just because some - let is write the seven right here, this is the thing called number. On an arbitrary iteration, it may pass this int as the first argument to the comparison function. This right here is being invoked right there. It is gonna pass in the address of that one isolated seven right there every single time. The second parameter is gonna get that, and if it fails then that, and if it fails then that, etc., until it runs out of space. I have to return a -one, or a  plus one, or a zero depending on whether they match or not. I also, because I am writing this function, specifically to make this call, this constrains the prototype to take two void  star 's, but I know that they are really int  star 's. So because I am writing that code as a client, I can reinterpret the void  star 's to be the int  star 's that they really are. So I will do this, int  star  ip two, and I will just set it equal to lm one and lm two. It turns out in a pure C compile you do not need to do a cast there, it just understands that the cast is implicit; it has to do it. So I have these local variable, ip one and ip two, that not only point to this and that right there, but they actually understand them to be four-by quantities to be interpreted as integers. Does that make sense? So all I have to do is return  star ip one -  star ip two. I am relaxing a little bit on the return type, I am letting zero meet a match. And of course, if that difference is zero than of the same number, -one and  plus one, I could constrain it to be that. I just want it to really be a negative number or a positive number to reflect the delta between the two. Does that make sense to people? So if you understand this, great. If you understand this, even better. I am sure most of you understand this even if it is the first time you have seen this type of code. Once we actually understand how all of this stuff works you are gonna be very, very happy. It is a little hard to understand the very first time you see it. But you have to recognize that this is not exactly the most elegant way to support generics, it is just the best that C, with it is specification that was more or less defined thirty-five years ago, can actually do. All the other languages you have ever heard of they are all so much younger that they have learned from C is mistakes and they have better solution for supporting generics. There are some plus is to this. It is very fast. You only use one copy of the code, ever, to do all of your lsearching. The template approach, it is more type safe. You get more information and compile time, but you get code bloat because you have got one instance of that lsearch algorithm for every single data type you ever searched for. Does that make sense? It is easier to get this right because you are not dealing with atomic types that are themselves pointers. We have integers right here. This gets a lot more complicated when you start dealing with the problem of lsearching an array of C-strings. Okay. So you are going to have an array of char  star 's, and you are gonna have to search for a particular char  star  to see whether or not you have a match or not. These are the int boards. I want to deal with this setup right here. I have a small array one, two, three, four. And let is say I have an array of C-strings. Let is just assume that it is initialized this way. And I have an array of five little notes there. And I want to search the array using lsearch for an E-flat. So here is my key that I am searching for; it points to an E-flat. I should emphasize that these are really character arrays that are null-terminated. Same thing with this. This right here is a character, character, character, character. This is a character array. That means that is a char  star ; char  star , char  star , char  star . The address of the array right there, the arrow I have just drawn in, is technically of type char  star   star . How is lsearch gonna absorb that? It is going to absorb it as a void  star . The only way it is gonna be able to compute that address, and that address, and that address as part of the linear search is because we are also gonna communicate the size of a char  star , so it can manually compute the addresses of all those boundaries. The comparison function that needs to be written in order to do this has to be willing to accept addresses of that type and that type right there. This is where things can get confusing because you can kinda drift back and say, well, everything is a pointer so why does it matter that I pass in this as opposed to this? You are gonna see, when we write the comparison function, that the number of hops from the tail of the arrow that is passed in really matters. If lsearch passes this type of pointer to your comparison function then you really are two hops away from the actual characters that are compared to one another. Does that make sense to people? You may ask, well, why does not the comparison function just pass these pointers in? The answer is that lsearch has no idea that those things are really pointers. The only thing it knows is if they happen to be for four-by-fourth of information. Make sense? Let me declare this: char  star  notes array is equal to, I will write them as string constants, A-flat, F-sharp, B, then G-flat, and then an isolated D. I can talk about how these things are stored in a little bit. They are not in the heap, they are actually global variables that happen to be constant. It is like normal global variables, except they happen to be character arrays that reside up there, and these are replaced at load time with the base addresses of the A, F and the D.
+
+char  star  (favorite note), as if I have a favorite note, it is E-flat.
+
+Let me be very clear about this picture again - actually, let me draw it again; favorite note points to E-flat. The actual array happens to be of length five. It points to strings A-flat, F-sharp, B, G-flat, and D. It is a cleaner picture. I want to search the array for my favorite note E-flat. The way you have to do this:
+
+char  star   star  (found)
+
+Now, that enough is a headache. To understand why it is a char  star   star  as opposed to a char  star . But we will get to that in a second. This is the way you would call lsearch. I have to pass in the address of my favorite note (I do not have to but I am going to, I will explain why in a second),  ampersand  favorite note. I am gonna pass in notes, that is the name of the array. Think about the data type of notes. Notes is the  ampersand  of the zeroth element. Since the zeroth element is a char  star , it is the base address of that capital A. Note is synonymous with that value right there. So even though it is being absorbed by lsearch as a void  star , because it was written generically so that is the best it can do, we know that it is really a char  star   star . I have five of these notes pass in size of char  star . Why char  star  as opposed to char  star   star ? Because I am interested in the actual width of these boxes so that lsearch can actually compute the boundaries between elements. And then, finally, with capital S and capital C, I am just contriving the name of some function called StrCmp. Where actually there is two versions of StrComp, the one I am writing and the one that is built into the C library, but the one that is in the C library does not have capital letters there. The reason I am passing in the  ampersand  here is because I want the true data type of the key, that is held by lsearch, to really be of the same type as all the pointers that are computed manually as part of the lsearch implementation. Does that make sense? If I know that this, and that, and that, and that, and that are all really char  star   star 's, it just makes life a little bit easier, if you have some symmetry inside code that is otherwise very complicated, to make sure that the key that is being compared against those five arrows is of the same data type. It does not have to be. I will get to that in a second. But I am writing it this way. So I pass in the  ampersand  of favorite notes. So I get the  ampersand  of the tail of that arrow that points to E-flat, two hops away from the capital E. I have to write the StrComp function. Even though lsearch returns a void  star , it either returns a null, which we can check just like we did up there, or it returns one of these five arrows. Now, because E-flat is not in there it is gonna return null. But if I had asked for the matching pointer to a G-flat, it would return that. I know that they are really char  star 's in here. Lsearch does not but I do. So when I know it is returning this type of pointer, I know that it is truly of type pointer to char  star  or char  star   star . Make sense?
+
+Student:
+
+[Inaudible] the same as [inaudible] char  star   star ?
+
+Instructor (Jerry Cain):Yeah. The question is the size of char  star  the same as the size of char  star   star ? The answer is, yes, because all pointers, at least in our world, are the same byte, and they are always the same size in any given system, and any given executable. You asked, I am sure, just to be clear that they are both the same size, but you really do want this for readability purposes to be the true data type that is held inside the boxes of the array.
+
+I could, if I wanted to, put seventeen  star 's there, and it would still work. That does not mean the code is the best way we could write it. Does that make sense?
+
+Student:[Inaudible?]
+
+Instructor (Jerry Cain):You do not have to. Right now, just for symmetry purposes, I am making sure that the key and the addresses of all the elements in the array are of the same true type. I will explain how we did not have to bother with the  ampersand  right here. You only can get away with that if you really understand what is going on. And I am just not assuming that that is the case in the first fifteen minutes of the example. But after I write it the one way, I will explain how we could have gotten rid of that  ampersand . Okay. Let me get rid of these asterisks.
+
+Okay. So I have to write StrCmp. I am gonna do it over on this board.
+
+int StrCmp takes two void  star 's. I will come up with better names this time, void  star  vp two. The first one is always gonna be that address right there because that is what I passed in,  ampersand  of favorite note. I know it is actually of type char  star  star . On an arbitrary iteration, it might pass in the address of that right there.
+
+So now that I have caused the implementation of lsearch, that right there, to just momentarily jump back to my type-safe code, the signature is not type safe, but the code that is inside can become type-safe if I actually cast things properly. So I am gonna go ahead and do this:
+
+char  star  sone (for string one) is equal to  star char  star   star  vpone,  star char  star   star  vp two
+
+Now, why does that look the way it does. I am casting vpone and vptwo to be of the type that I know that they really are, this type and that type right there. They are two hops away from bonafide characters. After I do that, I dereference them once so that this as a value, and maybe this as a value are sitting in local variables called sone and stwo.
+
+The reason I like that is because there is a built-in function as part of the clib that is completely in tune with the fact that the notion of a string is supported as character arrays that happen to be null-terminated, and that we pass around to those strings by address of the first character. This is the address of the capital E. this is the address of the capital G right there.
+
+What I can do is I can pass the buck to this built-in function with a lower case s and a lower case c, sone, stwo. It takes two char  star 's, and it knows how to do the booforce comparison of characters one after another, as long as they match continues. If it ever finds two characters that do not match then it knows that it cannot return zero, it just returns the difference between the two ASCII values of the non-matching characters. That even applies if you hit a backslash zero and one before you hit a backslash zero and the other one. The delta is still what is returned. Does that make sense to people?
+
+Student:[Inaudible] char  star ?
+
+Instructor (Jerry Cain):Why did not I just cast it to be a char  star ?
+
+Student:Yeah.
+
+Instructor (Jerry Cain):That is actually the question everybody asks right at this minute, the last eighteen times I have taught the lecture.
+
+So this right here is saying - is recognizing - I am recognizing the vpone that is being passed to me is really two hops away from actual characters. So that is why the double  star  is really the right thing there. And then I want to get two values that are just one hop away from the real data because that is what the built-in StrComp wants. StrComp, just like my intCompare function, it returns zero, -one or  plus one, so it happens to return the value that I am interested in.
+
+So you are questioning why a double  star  here and then dereference once when I might be able to just get rid of those two things and put char  star ? Is that what you are asking?
+
+Student:Yeah.
+
+Instructor (Jerry Cain):Okay. The problem is is that  star  in front of the open paren, as opposed to the other two  star 's on each line, that really is an instruction to hop forward once in memory and do a dereference. If I pass this as vptwo, I say that you are not pointing to a generic pointer you are actually pointing to a char  star . That is what the char  star   star  cast does. And then when I dereference it once I do that. Given the way I have set up the call right there, if I were to do this, this would take this right here and it would assume that the actual material right there are actual characters. Does that make sense?
+
+Student:Actually, I understand that [inaudible].
+
+Instructor (Jerry Cain):This right here?
+
+Student:[Inaudible.]
+
+Instructor (Jerry Cain):Well, that is actually the part that does the hop and goes from here to there right there. You are just dereferencing a pointer. Does that make sense?
+
+Student:Yeah.
+
+Instructor (Jerry Cain):Was there another question flying up somewhere?
+
+Student:Why [inaudible] char  star   star  [inaudible]?
+
+Instructor (Jerry Cain):Well, what is the alternative?
+
+Student:Just like referencing the [inaudible].
+
+Instructor (Jerry Cain):You actually could do that. That is where it confuses matters a little bit. But a void  star  you cannot dereference because it does not know what it is pointing to. A void  star   star  knows that it is pointing to a void  star . Does that make sense to people?
+
+I actually want to bring it into the char  star  domain as quickly as possible because then I really know sooner than later that I am actually dealing with strings. Otherwise, I am just leveraging off of my understanding of memory in a way that might not be clear to the person reading the code. Other questions?
+
+Now, somebody asked about this right here. My implementation of lsearch up here, it is very careful to pass in key as the first of the two parameters to every call-up comparison function. Does that make sense?
+
+Somebody asked what happens if I forget the  ampersand  there. Well, my callback function still interprets whatever pointer is passed in as a char  star   star , so rather than this being passed as the first argument to the comparison function every time, and pass this in, it would still do a dereference after it cast this to be a char  star   star . So that would mean momentarily it is pretending that the E and B, and the backslash zero, and the mystery character that is right there, that that actually represents a char  star , and then it would pass that to StrComp. That would not be good because it would jump to the E-flat mystery address in memory and just assume that there are really characters there.
+
+However, not that I like this for this example, but if you know what you are doing and you want to pass this in right here, you just do not want to deal with the overhead of a dereference when you know you do not need to, you could pass this in. And you could recognize that the first argument that is being passed in is actually one hop away from the characters, and the second one is actually two hops away from the characters.
+
+Student:[Inaudible.]
+
+Instructor (Jerry Cain):Well, I can say the way I wrote it first is the way it is typically written. Because of the symmetry, I think coders, I do not know if they like to see it, I think they are just in the habit of only dealing with comparison functions that really deal with the same incoming data type. And that is not the case if one is a char  star  for real and one is a char  star   star  for real.
+
+So it is more common for you to put an  ampersand  right there, and to do this just so that the first line and the second line kinda have the same structure.
+
+Now, for Assignment two search certainly comes up. As opposed to all of these examples, you know that there is some sordid flavor to the arrays that you are searching there. If you have not read Assignment two, again, I will try to be as generic as possible in my description. But you basically have the opportunity to binary search as opposed to linear search for Assignment two.
+
+There is a built in function called bsearch. It turns out that there is a built-in function called lsearch, as well. It is not technically standard, but almost all compilers provide it, at least on UNIX systems. I am gonna want you to use the generic bsearch algorithm, which has more or less the same prototype as lsearch right here, that is why I chose the prototype the way I did there, and it just does a generic binary search. You can implement it again yourself. If you already did then do not go back and call bsearch that is built-in. But I would actually prefer you to use the built-in just so you learn how to use it.
+
+This is the prototype for that built-in: void  star  is the return type. It is called bsearch, or naturally binary search. It takes a void  star  called key, it takes a void  star  called base, it takes an int, I think it is called len for length. I actually like n better, though, n always means size of an array. Int lm size, and then it takes the comparison function that takes two void  star 's. The algorithm - in many ways the pointer mechanics are exactly the same as they are up there, the only part that is different is that it kinda does this binary search to figure out what index to probe next. It assumes that the data is in sorted order.
+
+Now, I am going to say this, and you have to recognize it even though it does not sound very deep and insightful, it is. If you want to do the bsearch use this function for Assignment two, and you want to do it as elegantly as possible. You have to recognize, kind of in sync with what I did over here, when I erased the  ampersand  right here, you can pass in the address of anything you want to provided the comparison function knows that the first argument is gonna be the address of that something. Does that make sense to people?
+
+With the  ampersand  I pass in a char  star   star , without it I pass in a char  star . I could have constructed a record and put four pieces of information in there, passed in the  ampersand  of it, and then I could have cast the address that comes in as the first argument to be the address of that type of struct. The reason I am saying that is because you are gonna want to do exactly that for Assignment two. You are gonna need more than one piece of information to be available to the implementation of what you pass in right here.
+
+As far as this is concerned, I have never said this in lecture before, but I am glad I am remembering right now, it has to truly be an actual function. CSone hundred and sixb and one hundred and sixx, I do not want to say they are careless about, but they are just not concerned about it at the time. They use the word function everywhere for any block of code that takes parameters. When I say function, I am talking about this object-oriented-less unit, which is just some block of code that gets called as a function that has no object or class declaration around it.
+
+When I am talking about the type of number functions or functions that are inside classes, I do not refer to them as functions, I refer to them as methods. The difference between a function and a method, they look very similar, except that methods actually have the address of the relevant object lying around as this invisible parameter via this invisible parameter called this.
+
+The type of function that gets passed right here has to be either a global function that has nothing to do with the class or it has to be a method inside a class that is declared as static. Which means that it does not have any this pointer passed around on your behalf behind the scenes.
+
+I will probably send them an email just about that one point. Because if there are two or three problems that everybody has with Assignment two, one of them is related to this thing right here. Do you guys know about the this pointer from one hundred and sixb and one hundred and sixx? I think they actually used this even more in one hundred and sixa, when they talked about Java, and it seems to come up more there.
+
+C plus  plus  methods, those number functions that are defined in classes, normally pass around the address of the receiving object via an invisible parameter called this. And if you need to, you do not very often have to, but if you need to you can actually refer to the keyword this inside the implementation of any method, and it just evaluates to the address of the object that is being manipulated. That is what makes a method different than a regular function. Regular functions have nothing to do with objects so there is no invisible this pointer being passed around. You have to pass one of those object-oriented-less normal functions, or the name of one, as the fifth primary to bsearch.
+
+Student:Why is it that the comp function [inaudible)] behind before.
+
+Instructor (Jerry Cain):This right here?
+
+Student:Yeah.
+
+Instructor (Jerry Cain):Because these parenthesis were here, it is clear syntactically that it has to be a function pointer. And until about four years ago the asterisk inside was always required, and now it is just not. Because just the lexors and the [inaudible] know how to just decide if this is a function pointer type.
+
+I like the pointer there, for various reasons, just because that is how I used them for the first seventeen years I coded in C. And then someone went and changed it on me, and I am like, I do not care, I want to use it the old way. That is a very C way of looking at it, too. There is nothing modern about C, so you should not adopt any of it to modernisms. Any other questions at all?
+
+There are a billion little generic algorithms I could write, but I do not want to focus on these. You now have all the material I think you need to really make progress this weekend on Assignment two if you want to. Assignment two is definitely a jump up from Assignment one. Assignment one is intended to be all about UNIX, and just whenever you had time to get to it just to learn the UNIX that is necessary and then code up twenty lines of code to get RSG running. This is the one that really has some real C-isms that are required for the first half of the program. The second half, where you do the search, that is very C plus  plus -ish. Cubes and stacks and all that kind of stuff you have seen that before.
+
+What I want to do now is I want to transition from generic algorithms to generic data structures. And you probably have more practice with generics and templates in C plus  plus  with the vector, and the q, and the map, and the stack, and all of those things. I think more often than not, people program in C plus  plus  as if it is C that happens to have objects, and they use the vector and they use the map. They do not use the ones from one hundred and six, they use the ones from the actual built-in STL library. A lot of people code procedurally, and write C functions, and they happen to incidentally use the vector and the map as data structures.
+
+What I want to do is I want to write the same exact thing, support the same type of functionality in some C generics, recognizing that we do not have references, and we do not have templates, we do not even have classes. So we have to do the best we can to imitate the modern functionality that is offered by C plus  plus  and Java, and their templates, using C that has none of it.
+
+So what I want to do is I want to slow down a little bit, and I want to implement a stack data structure. I want to make it int specific just so we have a clear idea as to how the generic should be implemented. But I am just gonna go up front and say, we are gonna just implement everything in terms of int 's so there is no void  star  business yet.
+
+Just as there in C plus  plus , you will normally be very aggressive about separating behavior and implementation using the dot-h and the dot-CC scheme. But if you are a pure C you do not use dot-cc as in extension you use dot-C so you know that the file contains pure C code as opposed to C plus  plus  code.
+
+So what I want to write here is a stacked out h file, and this is how I am gonna do it. There is several ways to do it in C, but I want to imitate the way you are used to it from C plus  plus  as much as possible.
+
+There is no class keyword in C, but there is the struct. We are gonna use that. There is no const, there is no public, and there is no private. Our compiler actually supports const, but there is certainly no public and there is certainly no private. So what I want to do is I want to come as close to the definition of a class right here as possible using just C syntax. And this is how you do that:
+
+typedef struct (The typedef keyword is required in C; it is not required in C plus  plus ).
+
+And then I want to do the following:
+
+int  star  lm is
+
+int logical (length)
+
+int allocative (length)
+
+And that is it. I want to call this thing a stack.
+
+Now, in the dot-h file, when I define the struct right there, technically all three fields are exposed so they are implicitly public. Documentation above the dot-h, at least in Assignment three when we start doing this type of stuff, it is very clear that we are just exposing these three fields for convenience so people can actually declare stacks as local variables, and the compiler knows that they are twelve bytes tall but that you should not manipulate these three things at all.
+
+You should just rely on the functions, not methods, but functions right here to manipulate them. And just take this, accept for your ability to declare the stack and that you know that it has three fields inside. Think of any struct as a black box where you just are not afraid to manipulate the twelve bytes that are inside.
+
+I want to write a constructor function. I want to write this destructor, or disposal function, and then I want to write an is empty function, a pop function, a push function, things like that. So here is the prototype of the first thing I am interested in:
+
+void  star  stack (new)
+
+All I am gonna do is I am gonna pass in or expect the address of some stack that is already been allocated.
+
+We were talking about the this pointer before. You know how when you call a constructor in a class it has access to that this pointer, it is because it is passed in as like the -one'th parameter, or this invisible parameter before everything else. All we are doing is we are being very explicit about the fact that the address of the receiving structure is being passed in as the zeroth argument. We have to because that is what C allows us to do.
+
+I also have this function stack dispose. I want to identify the address of the stack structure that should be disposed. This is gonna be a dynamically allocated array that is not perfectly sized. So I want to keep track of how much space I have and how much of it I am using. I also want these methods. Let is forget about the is empty and the def, let is just do it with the real functions.
+
+Void stack push
+
+What stack am I pushing onto? The one identified by address right there. What integer is getting pressed? This one. And actually we will go with an int right here, stack pop. Which stack am I popping off of? The one that is identified by address right there. I just want to be concerned with those things right here.
+
+I do not know that I am gonna be able to implement very much because I only have about nine minutes left, but I can certainly, without code, just like pictures that serves a pseudo code, just give you some sense as to how things are gonna work.
+
+The allocation of a stack, when you do this, conceptually all I want to happen is for me to get space for one of these things right here. That means that this, as a picture, is gonna be set aside. And you know, based on what we have talked about in the past, that it is twelve bytes if the lm field is at the bottom, and that the two integers are stacked on top of it. But as far as the declaration is concerned, it does not actually clear these out, or zero them out like Java does, it just inherits whatever bits happen to reside in the twelve bytes that are overlaid by this new variable.
+
+It is when I call stack new that I pass in the address of this. Why does that work, and why do we know it can work? Because we identify the location of my question-mark-holding stack pass into a block of code that we are gonna allow to actually manipulate these three fields. And I am going to logically do the following:
+
+I am gonna take the raw space, that is set up this way. I am gonna set it is length to be zero. I am gonna make space for four elements. And I am gonna store the address of a dynamically allocated array of integers, where these question marks are right here, and initialize the thing that way. That means that that number can be used not only to store the effective depth of the stack, but it can also identify the index where I would like to place the next integer to be pushed.
+
+So because I am pre-allocating space for four elements, that means that this is a function. It is gonna be able to run very, very quickly for the very first calls. And it is only when I actually push a fifth element, that I detect that allocated space has been saturated, that I have to recover and panic a little bit and say, oh, I have to put these things somewhere else. That it will actually go and allocate another array that is twice as big, and move everything over, and then carry on as if the array were of length eight instead of four all along.
+
+You have done this very type of thing algorithmically. At least you have seen it with the C plus  plus  implementation of templates, and at least just these type of data structures from one hundred and sixb and one hundred and sixx. I am just doing this because I want to be able to start talking about the same implementation with int 's. Using one hundred and seven terminology we are gonna be dealing with arrays. You can imagine that when we go generic this is still gonna be an array, just like the arrays passed to lsearch and bsearch are, but we are gonna have to manually compute the insertion index to house the next push call, or to accommodate the next push call, and do the same thing for hop.
+
+I do this [inaudible] int i  equals  zero; i < five, i plus  plus . I want to go ahead and I want to do a stack push. Which stack? The one at that address, and I just want to pass in i. Just draw the picture as to how everything is updated. And then right here, rather than dealing with the pop problem, which is actually not anymore difficult than the push problem, I just want to go ahead and stack dispose  ampersand  of s.
+
+So from a picture standpoint, the very first iteration of this thing is gonna push a zero onto the stack, it is gonna push it at that index. So I am gonna put a zero right there, and put a one right there. It is that one that more or less marks the implicit boundary between what is in use and what is not in use. Make sense?
+
+Next several iterations succeed in sending that to two after there is a one there, and three to put a two there. It makes this a four, puts a three right there. It detects that now as the boundary between what is in use and what is not in use. You could reallocate right here if you wanted to. I would not do it yet, I would only do it when you absolutely need to on the very fifth iteration of this thing. So what has to happen is that on the very last iteration here I have to do that little panic thing, where I say, I do not have space for the four. So I have to go and allocate space for everything.
+
+So I am gonna use this doubling strategy, where I have gotta set aside space for eight elements. I copy over all the data that was already here. I free this. Get this to point to this space as if it were the original figure I have allocated. Forget about that smaller house, I have moved into a bigger house and I hated the older house. And then I can finally put down the four and make this a five and make this an eight. So that is the generic algorithm we are gonna be following for this code right here.
+
+Now, I do have a few minutes. Let me implement stack new and stack disposed. And then I will come back and I will deal with stack push the beginning of Monday. I just want to go ahead and put the dot-h here and have its dot-c profile right to its right.
+
+I want to implement stack new. So take a stack address, just like that, recognize that s is a local variable. It has to make the assumption that it is pointing to this twelve-byte figure of question marks that is that tall right there.
+
+So what I want to do is I want to go in. I want to s arrow logical n  equals  zero. I want to do s arrow alloc len  equals  four, and then I want to do the following: I want to do s arrow lm is  equals  (this is a function you have not seen before) malloc times four times size of int . Now, if I tell you that this is dynamic memory allocation you are not gonna be surprised by that because the word alloc, the substring alloc, comes up in the function. This is C is earlier solution to the operator new solution. We do not have new and delete in pure C, we have this raw memory allocator called malloc.
+
+Operator new takes account and an implicit data type, because you actually say new into four or new double of twenty. You do not do that in C. Not that we should be impressed with the idea, but the way malloc works is it expects one argument to be the raw number of bytes that you need for whatever array or whatever structure you are building. And if I want space for four integers that is certainly in sync with this line, where I am saying I am allocating four of them, you have to do four times the size of the figure, it goes and searches for a blob in heap, that is sixteen bytes wide, and it returns the address of it.
+
+There is some value in actually doing this. You have seen the assert function in the assignment starter code, or Assignment one. There is this function called assert. It is actually not a function it is actually a macro. There is this thing you can invoke called assert in the code, which takes a boolean value, takes something that functions as a test. It effectively becomes a no op if this test is true, but if this is false assert actually ends the program and tells you what line the program ended at. It tells you the file number containing and the line number of the assert that broke.
+
+The idea here is that you want to assert the truth of some condition, or assert that some condition is being met, before you carry forward. Because if I do not put this here and malloc failed, it could not find sixteen bytes (That would not happen but just assume it could) and it returned null, you do not want to allow the program to run for forty-four more seconds for it to crash because you de-referenced a null pointer somewhere. You just do not want to dereference a null pointer because it is not a legitimate pointer it is a centinal meaning failure. So you do not want to dereference failure because that amounts to more failure.
+
+And then you will get something, while the program is running, called a seg fault or a bus error. And I am sure some of you have seen them. Those are things you do not want to see. You would rather see an assert, where it tells you what line number was the problem as opposed to a seg fault, which just says, I am a seg fault, and notice your program stops.
+
+This can be stripped out very easily so that it does not exist in production code. You actually do not want this failing if a customer is using this code because then it makes it clear that your code broke as opposed to their code. This can be very easily stripped out at compile time without actually changing the code.
+
+So when we come back on Monday I will finish the rest of these three and then we will go generic on you.
+
+[End of Audio]
+
+Duration: fifty-two minutes
+
+
+

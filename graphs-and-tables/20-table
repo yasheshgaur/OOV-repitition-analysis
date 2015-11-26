@@ -1,0 +1,35 @@
+------------------  ---------  -------------------------  -------------------------  ------------------------
+OOV word            frequency  First Occurence (seconds)  Minimum Spacing (seconds)  Maximum Spacing(seconds)
+
+scpd                1          59                         NA                         NA
+youve               2          208                        2030                       2030
+ocaml               1          382.5                      NA                         NA
+literals            1          775                        NA                         NA
+tuple               1          898                        NA                         NA
+comprehensions      2          919                        2.5                        2.5
+studenthomogeneous  1          1749                       NA                         NA
+complier            1          1832                       NA                         NA
+bool                13         2054                       0.5                        1398
+studentwhen         1          2130                       NA                         NA
+enum                2          2246.5                     1                          1
+true/false          2          2254                       104                        104
+enums               1          2281.5                     NA                         NA
+studentyeah         1          2628.5                     NA                         NA
+studentso           1          2645                       NA                         NA
+chars               4          2840.5                     1.5                        1501.5
+studentcan          1          3120.5                     NA                         NA
+youd                1          3128                       NA                         NA
+studentwhat         1          3416                       NA                         NA
+destructor          1          3523                       NA                         NA
+weve                3          3760.5                     89                         609
+whatevers           1          3787                       NA                         NA
+studentdo           1          4149                       NA                         NA
+studentis           1          4161                       NA                         NA
+hadnt               1          4179                       NA                         NA
+studentjust         1          4185                       NA                         NA
+haskellorg          1          4526.5                     NA                         NA
+ghc                 1          4555.5                     NA                         NA
+------------------  ---------  -------------------------  -------------------------  ------------------------
+Total number of OOV types 28 
+Total number of OOV tokens 49 
+OOV rate from the table: 0.5325508096945984132159547875

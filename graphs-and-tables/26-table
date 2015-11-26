@@ -1,0 +1,25 @@
+-----------  ---------  -------------------------  -------------------------  ------------------------
+OOV word     frequency  First Occurence (seconds)  Minimum Spacing (seconds)  Maximum Spacing(seconds)
+
+rsg          1          54                         NA                         NA
+malloc       33         102                        2                          331
+realloc      23         103.5                      6                          404.5
+youve        5          160                        2                          532
+itll         12         291                        3                          1356.5
+theyll       1          794                        NA                         NA
+numbytes     1          881.5                      NA                         NA
+studentthat  1          1009                       NA                         NA
+alloc        1          1722.5                     NA                         NA
+structs      1          1951                       NA                         NA
+and/or       1          2377.5                     NA                         NA
+weve         2          2483.5                     657.5                      657.5
+thatll       1          2555.5                     NA                         NA
+decremented  2          2834.5                     160.5                      160.5
+whatevers    1          2973.5                     NA                         NA
+decrements   1          3057                       NA                         NA
+youd         2          3619.5                     506.5                      506.5
+shovelers    1          3814                       NA                         NA
+-----------  ---------  -------------------------  -------------------------  ------------------------
+Total number of OOV types 18 
+Total number of OOV tokens 90 
+OOV rate from the table: 1.065467029714691606487510359

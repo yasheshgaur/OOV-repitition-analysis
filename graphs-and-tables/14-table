@@ -1,0 +1,34 @@
+----------------  ---------  -------------------------  -------------------------  ------------------------
+OOV word          frequency  First Occurence (seconds)  Minimum Spacing (seconds)  Maximum Spacing(seconds)
+
+theyve            1          13                         NA                         NA
+weve              4          519                        773.5                      1675.5
+suffixed          1          539                        NA                         NA
+youve             3          635.5                      721                        2120
+iterators         1          669                        NA                         NA
+incr              2          874                        570                        570
+unary             8          898.5                      6.5                        2443
+chars             2          1198.5                     7                          7
+cudas             1          1207                       NA                         NA
+foreach           2          1273                       2                          2
+wouldve           2          1441.5                     997                        997
+eval              14         1533                       0.5                        293
+parend            2          1543.5                     6.5                        6.5
+tokenizes         1          1553.5                     NA                         NA
+tokenized         1          1583                       NA                         NA
+cursion           1          1888                       NA                         NA
+recursions        1          2052                       NA                         NA
+seenand           1          2163                       NA                         NA
+programmatically  2          2171                       72                         72
+textually         2          2175.5                     50                         50
+consd             1          2405                       NA                         NA
+prepended         1          2407                       NA                         NA
+listification     1          2730                       NA                         NA
+progenerated      1          2821.5                     NA                         NA
+youd              1          3214.5                     NA                         NA
+herejust          1          3294                       NA                         NA
+jockier           1          3544.5                     NA                         NA
+----------------  ---------  -------------------------  -------------------------  ------------------------
+Total number of OOV types 27 
+Total number of OOV tokens 59 
+OOV rate from the table: 0.7505406436840096679811728788

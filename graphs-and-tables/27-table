@@ -1,0 +1,21 @@
+------------  ---------  -------------------------  -------------------------  ------------------------
+OOV word      frequency  First Occurence (seconds)  Minimum Spacing (seconds)  Maximum Spacing(seconds)
+
+weve          3          65                         1536                       1822
+csten         1          66.5                       NA                         NA
+placeholders  1          105                        NA                         NA
+incremented   2          655.5                      823.5                      823.5
+structs       5          730.5                      7.5                        2883
+youd          3          1227                       880.5                      1826
+youve         3          1520                       131.5                      1266.5
+oneth         1          1746                       NA                         NA
+twoth         1          1747                       NA                         NA
+threeth       1          1748.5                     NA                         NA
+studentif     2          2798.5                     152.5                      152.5
+struct        9          3655.5                     4                          96.5
+denom         6          3658                       13.5                       105.5
+itll          1          4114                       NA                         NA
+------------  ---------  -------------------------  -------------------------  ------------------------
+Total number of OOV types 14 
+Total number of OOV tokens 39 
+OOV rate from the table: 0.4629629629629629629629629630
